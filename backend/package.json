@@ -6,6 +6,8 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
+    "replit:dev": "tsx watch src/server.ts",
+    "replit:prod": "npm run build && node dist/server.js",
     "lint": "eslint src --ext .ts"
   },
   "dependencies": {

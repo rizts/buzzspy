@@ -4,8 +4,12 @@ config();
 export const CONFIG = {
   server: {
     port: parseInt(process.env.PORT || '3000'),
-    host: process.env.HOST || '0.0.0.0',
+    host: '0.0.0.0', // Replit requires 0.0.0.0
     env: process.env.NODE_ENV || 'development',
+    isReplit: process.env.REPL_ID !== undefined,
+    replitUrl: process.env.REPL_SLUG 
+      ? `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
+      : undefined,
   },
   
   redis: {

@@ -4,6 +4,7 @@ import { CONFIG } from './config/index.js';
 import { redis } from './config/redis.js';
 import { logger } from './utils/logger.js';
 import { registerRoutes } from './routes/index.js';
+import { setupReplitKeepAlive, logReplitEnvironment } from './config/replit.js';
 
 const app = Fastify({
   logger: logger as any,
