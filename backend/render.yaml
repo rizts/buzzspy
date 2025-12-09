@@ -10,3 +10,5 @@ services:
         value: production
       - key: REDIS_URL
         sync: false
+      - key: REDIS_TOKEN
+        sync: false
