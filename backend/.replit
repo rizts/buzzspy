@@ -1,0 +1,23 @@
+# Replit Configuration for BuzzSpy Backend
+run = "npm run dev"
+
+[deployment]
+run = ["sh", "-c", "npm run build && npm start"]
+deploymentTarget = "cloudrun"
+
+[nix]
+channel = "stable-23_11"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[env]
+NODE_ENV = "production"
+
+[languages]
+[languages.typescript]
+pattern = "**/*.ts"
+
+[languages.typescript.languageServer]
+start = "typescript-language-server --stdio"
